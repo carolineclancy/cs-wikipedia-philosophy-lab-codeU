@@ -10,6 +10,18 @@ import org.jsoup.nodes.TextNode;
 
 import org.jsoup.select.Elements;
 
+
+
+// Takes a URL for a Wikipedia page, downloads it, and parses it.
+// It should traverse the resulting DOM tree to find the first valid link. We'll explain what "valid" means below.
+// If the page has no links, or if the first link is a page we have already seen, the program should indicate failure and exit.
+// If the link matches the URL of the Wikipedia page on philosophy, the program should indicate success and exit.
+// Otherwise it should go back to Step 1.
+
+
+
+
+
 public class WikiPhilosophy {
 	
 	final static WikiFetcher wf = new WikiFetcher();
@@ -43,9 +55,29 @@ public class WikiPhilosophy {
 			}
         }
 
+  //       String url = "https://en.wikipedia.org/wiki/Java_(programming_language)";
+ 
+		// Elements paragraphs = wf.fetchWikipedia(url);
+	 
+	 //    // select the content text and pull out the paragraphs.
+	 //    Element content = paragraphs.getElementById("mw-content-text");
+	 
+	 //    // TODO: avoid selecting paragraphs from sidebars and boxouts
+	 //    Elements paras = content.select("p");
+
+		// Element firstPara = paras.get(0);
+		 
+	 //    Iterable<Node> iter = new WikiNodeIterable(firstPara);
+	 //    for (Node node: iter) {
+	 //        if (node instanceof TextNode) {
+	 //            System.out.print(node);
+	 //        }
+	 //    }
+
+
         // the following throws an exception so the test fails
         // until you update the code
-        String msg = "Complete this lab by adding your code and removing this statement.";
-        throw new UnsupportedOperationException(msg);
+        // String msg = "Complete this lab by adding your code and removing this statement.";
+        // throw new UnsupportedOperationException(msg);
 	}
 }
